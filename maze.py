@@ -26,7 +26,7 @@ class Maze:
     def gen_maze(self):
         parent=prim(self.gen_graph())
         graph=Graph()
-        
+
 
 
 
