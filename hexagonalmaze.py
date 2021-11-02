@@ -35,5 +35,4 @@ class HexagonalMaze(Maze):
                             graph.add_arc(((x,y),(x+1,y+1)),random.uniform(0,1))
                             weight5 = graph.arc_weight(((x,y),(x+1,y+1)))
                             graph.add_arc(((x+1,y+1),(x,y)), weight5)
-
         return graph

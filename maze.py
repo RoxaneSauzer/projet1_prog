@@ -23,8 +23,18 @@ class Maze:
                     graph.add_arc(((x,y+1),(x,y)))
         return graph
 
-    def draw(self):
+    def draw_hex(self):
         render.draw_hex_maze(self.graph, draw_coordinates=True)
+
+    def draw_hex_maze_with_path(self):
+        render.draw_hex_maze(self.graph, self.get_solution())
+
+    def draw_square(self):
+        render.draw_square_maze(self.graph,draw_coordinates=True)
+
+    def draw_square_maze_with_path(self):
+        render.draw_square_maze(self.graph, self.get_solution())
+
 
     def generate_maze(self):
         parent=prim(self.graph)
