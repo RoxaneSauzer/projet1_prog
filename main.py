@@ -2,7 +2,10 @@ import render
 from maze import Maze
 import graph
 import coveringtree
+from hexagonalmaze import HexagonalMaze
 
 
-maze=Maze(10,10)
-render.draw_tree(maze.gen_maze())
+maze=HexagonalMaze(10,20)
+
+maze.generate_maze()
+render.draw_hex_maze(maze.graph, maze.get_solution())

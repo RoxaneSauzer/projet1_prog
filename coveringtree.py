@@ -1,7 +1,7 @@
 import math
 from graph import Graph
 
-def min_cost(cost, choices):
+def get_min_cost(cost, choices):
     mincost=math.inf
     min=0
     for u in choices:
@@ -20,7 +20,7 @@ def prim(graph):
 
     choices=graph.nodes()
     while len(choices)!=0:
-        min= min_cost(cost,choices)
+        min= get_min_cost(cost,choices)
         choices.remove(min)
 
         for v in graph.successors(min):
